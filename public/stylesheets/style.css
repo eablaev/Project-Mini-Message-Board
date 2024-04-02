@@ -1,8 +1,112 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; 
+  
+}
+:root {
+    --accent-color:#00B7FF;
+    --main-color:#000000;
+    --bg-color-two:white;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    height: 100vh;
+
+    border: 1px solid var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.title {
+    color: var(--accent-color);
 }
 
 a {
-  color: #00B7FF;
+    color: var(--accent-color);
+    text-decoration: none;
 }
+
+
+
+.newMessage, .sendMessage, .goBack { 
+  
+    background-color: var(--bg-color-two);
+    border: 1px solid var(--accent-color);
+    padding: 1em 2em;
+    width: max-content;
+    margin-top: 3em;
+    cursor: pointer;
+    color: var(--accent-color);
+      
+}
+.newMessage:hover, .sendMessage:hover, .goBack:hover {
+    background-color:var(--accent-color);
+    border-color: rgb(131, 161, 244);
+    color: var(--bg-color-two);
+  
+}
+
+.newMessage:hover>a {
+    color: var(--bg-color-two);
+}
+
+.messageContainer, #message, #author {
+    border: 1px solid var(--accent-color);
+    margin: 1em 0;
+    padding: .6em 2em;
+    width: 40vw;
+    border-radius: 10px;
+}
+
+.userName, 
+.userMessage,
+.dateSent {
+    margin: 0;
+}
+
+.userName {
+    font-weight: 800;
+    color: #00B7FF;
+}
+.userMessage {
+    font-weight: 100;
+    padding: .3em 0;
+}
+.dateSent {
+    font-weight: 100;
+    opacity: .3;
+}
+
+
+.inputField {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#author, #message {
+    font-weight: 100;
+    padding: .5em 1em;
+}
+
+
+.goBack {
+    
+    margin: 0;
+    padding: .2em .4em;
+}
+
+

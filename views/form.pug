@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    button.goBack(onclick="history.back()") Go Back
+    h1.title New Message
+    form.form(action="/new", method="post") 
+        div.inputField 
+            label(for="author") Name:
+            input#author.userName(type="text", name='author', placeholder="Name")
+        div.inputField  
+            label(for="message" required) Message:
+            textarea#message.userMessage(name="message", cols="30", rows="4", placeholder="Message" required)
+
+        button.sendMessage(type="submit") Send it
+    
+
